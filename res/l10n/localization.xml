@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_smartydemo_pi1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="translate_4">This text was last translated on the {data source="date:d-m-y"}</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="translate_4">Dieser Text wurde zuletzt übersetzt am {data source="date:d-m-y"}</label>
+		</languageKey>
+	</data>
+</T3locallang>

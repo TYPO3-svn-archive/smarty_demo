@@ -1,0 +1,260 @@
+/****************************
+ * Reset all styles
+ ****************************/
+
+#smarty_demo * {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-size: 1em;
+	outline: none;
+}
+
+#smarty_demo code, #smarty_demo kbd, #smarty_demo samp, #smarty_demo pre, #smarty_demo tt, #smarty_demo var, #smarty_demo textarea, #smarty_demo input, #smarty_demo select, #smarty_demo isindex {
+	font: inherit;
+	font-size: 1em;
+}
+
+#smarty_demo dfn, #smarty_demo i, #smarty_demo cite, #smarty_demo var, #smarty_demo address, #smarty_demo em {
+	font-style: normal;
+}
+
+#smarty_demo th, #smarty_demo b, #smarty_demo strong, #smarty_demo h1, #smarty_demo h2, #smarty_demo h3, #smarty_demo h4, #smarty_demo h5, #smarty_demo h6 {
+	font-weight: normal;
+}
+
+#smarty_demo a, #smarty_demo img, #smarty_demo a img, #smarty_demo iframe, #smarty_demo form, #smarty_demo fieldset, #smarty_demo abbr, #smarty_demo acronym, #smarty_demo object, #smarty_demo applet {
+	border: none;
+}
+
+#smarty_demo table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#smarty_demo caption, #smarty_demo th, #smarty_demo td, #smarty_demo center {
+	text-align: left;
+	vertical-align: top;
+}
+
+#smarty_demo q {
+	quotes: "" "";
+}
+
+#smarty_demo ul, #smarty_demo ol, #smarty_demo dir, #smarty_demo menu {
+	list-style: none;
+}
+
+#smarty_demo sub, #smarty_demo sup {
+	vertical-align: baseline;
+}
+
+#smarty_demo a {
+	color: inherit;
+}
+
+#smarty_demo hr {
+	display: none;
+}
+
+#smarty_demo font {
+	color: inherit !important;
+	font: inherit !important;
+	color: inherit !important;
+}
+
+/****************************
+ * Basic HTML element styles
+ ****************************/
+
+#smarty_demo {
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	line-height: 1em;
+	background: white;
+	color: black;
+}
+
+#smarty_demo p {
+	margin-bottom: 1em;
+}
+
+#smarty_demo h1 {
+	font-size: 1.5em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #6D929B;
+	line-height: 1.5em;
+}
+
+#smarty_demo h2 {
+	font-size: 1.5em;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #6D929B;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #C1DAD7;
+}
+
+#smarty_demo h3 {
+	font-size: 1.3em;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 1.3em;
+	margin-top: 1em;
+}
+
+#smarty_demo h4 {
+	font-size: 1em;
+	text-transform: uppercase;
+	font-weight: normal;
+	line-height: 1.3em;
+	font-style: normal;
+	color: #6D929B;
+}
+
+#smarty_demo b, #smarty_demo strong {
+	font-weight: bold;
+}
+
+#smarty_demo i, #smarty_demo em {
+	font-style: italic;
+}
+
+/****************************
+ * Table styles
+ ****************************/
+
+#smarty_demo table {
+	border: 2px solid #C1DAD7;
+	margin: 2px;
+	border-collapse: collapse;
+	width: 97%;
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+#smarty_demo thead tr {
+	color: #6D929B;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background-color: #CAE8EA;
+}
+
+#smarty_demo td, #smarty_demo th {
+	padding: 2px;
+}
+
+#smarty_demo tr {
+	border-bottom: 1px dotted #C1DAD7;
+	border-top: 1px dotted #C1DAD7;
+}
+
+#smarty_demo tr.odd {
+	background-color: #F5FAFA;
+}
+
+#smarty_demo tr.odd {
+	
+}
+
+/****************************
+ * Image styles
+ ****************************/
+
+#smarty_demo .demo-image {
+	padding: 10px;
+	border: 1px solid #C1DAD7;
+}
+
+#smarty_demo .demo-image {
+	padding: 10px;
+	border: 1px solid #C1DAD7;
+}
+
+/****************************
+ * Href styles
+ ****************************/
+
+#smarty_demo a {
+	color: #CC4200;
+	text-decoration: none;
+	background-color: transparent;
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+}
+
+#smarty_demo a:hover {
+	color: #CC4200;
+	text-decoration: underline;
+	background-color: transparent;
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+}
+
+#smarty_demo a.email-link {
+	padding-left: 15px;
+	background: url(../img/mailto.gif) no-repeat;
+}
+
+#smarty_demo a.external-link {
+	padding-left: 13px;
+	background: url(../img/external.gif) no-repeat;
+}
+
+#smarty_demo a.download-link {
+	padding-left: 13px;
+	background: url(../img/download.gif) no-repeat;
+}
+
+#smarty_demo a.internal-link {
+	padding-left: 13px;
+	background: url(../img/internal.gif) no-repeat;
+}
+
+/****************************
+ * Misc. HTML element styles
+ ****************************/
+
+#smarty_demo pre, #smarty_demo code {
+	background-color: #F5FAFA;
+	border: 1px solid #C1DAD7;
+	margin: 0;
+	margin-bottom: 1em;
+	margin-top: .4em;
+	padding: 2px;
+	text-align: left;
+	font-family: "Courier New",Courier,monospace;
+}
+
+/****************************
+ * Misc. helper styles
+ ****************************/
+
+#smarty_demo .bg-ffffff {
+	background-color: #FFFFFF;
+}
+
+#smarty_demo .bg-f5fafa {
+	background-color: #F5FAFA;
+}
+
+#smarty_demo .border-top-dotted {
+	padding-top: 1px;
+	border-top: 1px dotted #6D929B;
+}
+
+#smarty_demo .border-top-dashed {
+	padding-top: 1px;
+	border-top: 1px dashed #6D929B;
+}
+
+#smarty_demo .border-top-solid {
+	padding-top: 1px;
+	border-top: 1px solid #6D929B;
+}

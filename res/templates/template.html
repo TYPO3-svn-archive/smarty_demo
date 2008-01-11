@@ -1,0 +1,174 @@
+{header}
+	<link href="typo3conf/ext/smarty_demo/res/css/smarty_demo.css" rel="stylesheet" type="text/css" />
+{/header}
+<div id="smarty_demo">
+	<h1>Smarty Demo</h1>
+	<h2>Content from the Extension</h2>
+	<h3>Demo Data</h3>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">{translate}name{/translate}</td>
+				<th scope="col">{translate}city{/translate}</td>
+				<th scope="col">{translate}country{/translate}</td>
+			<tr>
+		</thead>
+		<tbody>
+			{section name=row loop=$demo_data}
+			<tr class="{if $smarty.section.row.index is even}even{else}odd{/if}">
+				<td>{link parameter="`$demo_data[row].email`"}{$demo_data[row].name}{/link}</td>
+				<td>{$demo_data[row].city}</td>
+				<td>{$demo_data[row].country}</td>
+			</tr>
+			{/section}
+		</tbody>
+	</table>
+	<h3>Demo Content</h3>
+	{$demo_text|format}
+	<h2>Various Smarty Plugins for TYPO3</h2>
+	<h3>The {ldelim}image{rdelim} Plugin</h3>
+	<h4>Example using TypoScript params</h4>
+	<code>
+    	{literal}{image file="EXT:smarty_demo/res/img/image_2.jpg" file.width="200" titleText="A Demo of the image plugin" params='class="demo-image bg-f5fafa"'}{/literal}
+    </code>
+	<p>{image file="EXT:smarty_demo/res/img/image_2.jpg" file.width="200" titleText="A Demo of the image plugin" params='class="demo-image bg-f5fafa"'}</p>
+	<h4>Example using the "setup" parameter</h4>
+	<code>
+    	{literal}
+    		{image setup="plugin.tx_smartydemo_pi1.demo_image" file.20.file="EXT:smarty_demo/res/img/image_1.jpg" params='class="demo-image bg-ffffff"'}
+			{image setup="plugin.tx_smartydemo_pi1.demo_image" file.20.file="EXT:smarty_demo/res/img/image_3.jpg" params='class="demo-image bg-ffffff"'}
+		{/literal}
+    </code>
+	<p>
+		{image setup="plugin.tx_smartydemo_pi1.demo_image" file.20.file="EXT:smarty_demo/res/img/image_1.jpg" params='class="demo-image bg-ffffff"'}&nbsp;&nbsp;
+		{image setup="plugin.tx_smartydemo_pi1.demo_image" file.20.file="EXT:smarty_demo/res/img/image_3.jpg" params='class="demo-image bg-ffffff"'}
+	</p>
+	<h3>The {ldelim}link{rdelim} Plugin</h3>
+	<h4>Example using TypoScript params</h4>
+	<code>
+    	{literal}
+    		{link parameter="_self _blank internal-link" additionalParams="&demo=1"}
+    			{translate}link_1{/translate}
+    		{/link}
+    	{/literal}
+    </code>
+	<p>{link parameter="_self _blank internal-link" additionalParams="&demo=1"}{translate}link_1{/translate}{/link}</p>
+	<h4>Example using the "setup" parameter</h4>
+	<code>
+    	{literal}
+    		{link setup="plugin.tx_smartydemo_pi1.demo_link"}
+    			{translate}link_2{/translate}
+    		{/link}
+    	{/literal}
+    </code>
+	<p>{link setup="plugin.tx_smartydemo_pi1.demo_link"}{translate}link_2{/translate}{/link}</p>
+	<h4>Example of an email link</h4>
+	<code>
+    	{literal}
+			{link parameter="hello@world.com - email-link"}
+				{translate}link_3{/translate}
+			{/link}
+    	{/literal}
+    </code>
+	<p>{link parameter="hello@world.com - email-link"}{translate}link_3{/translate}{/link}</p>
+	<h3>The {ldelim}data{rdelim} Plugin</h3>
+	<h4>Getting the current page title</h4>
+	<code>
+    	{literal}
+    		{data source="page:title"}
+    	{/literal}
+    </code>
+	<p>{data source="page:title"}</p>
+	<h4>Getting localized labels</h4>
+	<code>
+    	{literal}
+    		The localized label for a logout button: &lt;strong&gt;{data source="LLL:EXT:css_styled_content/pi1/locallang.xml:login.logout"}&lt;strong&gt;
+    	{/literal}
+    </code>
+	<p>The localized label for a logout button: <strong>{data source="LLL:EXT:css_styled_content/pi1/locallang.xml:login.logout"}</strong></p>
+	<h3>The {ldelim}translate{rdelim} Plugin</h3>
+	<h4>Example #1 of the {ldelim}translate{rdelim} plugin</h4>
+	<code>
+    	{literal}
+    		{translate label="translate_1"}This text will be translated{/translate}
+    	{/literal}
+    </code>
+	<p>{translate label="translate_1"}This text will be translated{/translate}</p>
+	<h4>Example #2 of the {ldelim}translate{rdelim} plugin</h4>
+	<code>
+    	{literal}
+    		{translate hsc="1"}translate_2{/translate}
+    	{/literal}
+    </code>
+	<p>{translate hsc="1"}translate_2{/translate}</p>
+	<h4>Example illustrating the usage of Smarty tags <em>inside</em> the translated text</h4>
+	<code>
+    	{literal}
+    		{translate}translate_3{/translate}
+    	{/literal}
+    </code>
+    <p><em>Language labels can contain Smarty tags:</em></p>
+	<code>
+	{literal}
+&lt;T3locallang&gt;<br />
+&lt;data type=&quot;array&quot;&gt; <br />
+&lt;languageKey index=&quot;default&quot; type=&quot;array&quot;&gt;<br />
+&lt;label index=&quot;translate_3&quot;&gt;Read the {link parameter=&quot;typo3conf/ext/smarty_demo/doc/manual.pdf _blank download-link&quot;}manual{/link}!&lt;/label&gt;<br />
+&lt;/languageKey&gt;<br />
+&lt;/languageKey&gt;<br />
+&lt;/data&gt;<br />
+&lt;/T3locallang&gt;
+	{/literal}
+    </code>
+	<p>{translate}translate_3{/translate}</p>
+	<h4>Example using a different language file</h4>
+	<code>
+    	{literal}
+    		{translate label="LLL:EXT:smarty_demo/res/l10n/localization.xml:translate_4"}Some other text...{/translate}
+    	{/literal}
+    </code>
+	<p>{translate label="LLL:EXT:smarty_demo/res/l10n/localization.xml:translate_4"}Some other text...{/translate}</p>
+	<h4>Using the "alt" parameter to catch untranslated labels</h4>
+	<code>
+    	{literal}
+    		{translate label="translate_5" alt="Couldn't find the translation"}Some text that can't be translated{/translate}
+    	{/literal}
+    </code>
+	<p>{translate label="translate_5" alt="Couldn't find the translation"}Some text that can't be translated{/translate}</p>
+	<h3>The {ldelim}object{rdelim} Plugin</h3>
+	<h4>The object plugin renders TypoScript objects, e.g. lib.myObject</h4>
+	<code>
+    	{literal}
+    		{object setup="plugin.tx_smartydemo_pi1.demo_object"}
+    	{/literal}
+    </code>
+	<div>
+		{object setup="plugin.tx_smartydemo_pi1.demo_object"}
+	</div>
+	<h3>The {ldelim}typoscript{rdelim} Plugin</h3>
+	<h4>The typoscript plugin interprets the content between the {ldelim}typoscript{rdelim} tags as TypoScript</h4>
+	<code>
+    	{literal}
+			{typoscript}<br/>
+				10 = TEXT<br/>
+				10.value = Hello World!<br/>
+				10.wrap = &lt;p&gt;|&lt;p&gt;<br/>
+			{/typoscript}<br/>
+    	{/literal}
+    </code>
+	{typoscript}
+		10 = TEXT
+		10.value = Hello World!
+		10.wrap = <p>|</p>
+	{/typoscript}
+	<h3>Create your own plugin</h3>
+	<h4>It's easy to add your own plugins...</h4>
+	<code>
+    	{literal}
+			{substr start="0" length="-2"}
+				{repeat string="Hello World, " times="12"}
+			{/substr}.
+    	{/literal}
+    </code>
+	<p>{substr start="0" length="-2"}{repeat string="Hello World, " times="12"}{/substr}.</p>
+</div>

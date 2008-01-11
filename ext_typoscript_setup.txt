@@ -1,0 +1,76 @@
+plugin.tx_smartydemo_pi1 {
+
+	//*********************************************
+	// Smarty configuration for this extension
+	//*********************************************
+
+	smarty {
+
+		// The location of your Smarty templates for this extension
+		template_dir = EXT:smarty_demo/res/templates
+
+		// Location of some additional Smarty plugins
+		plugins_dir = EXT:smarty_demo/res/plugins
+
+		// Enable debugging console for all templates
+		debugging = true
+
+		// Report all PHP errors
+		error_reporting = E_ALL
+
+	}
+
+	//*********************************************
+	// Misc. TypoScript used in the plugins
+	// in the demo template
+	//*********************************************
+
+	// Image definition for the {image} plugin
+	demo_image {
+		params = class="demo-image "
+		titleText = Another Demo of the image plugin
+		file = GIFBUILDER
+		file {
+			XY = 170, [10.w]
+			//width = 170
+			10 = IMAGE
+			10.file.height = 170c
+			10.file = EXT:smarty_demo/res/img/image_4.gif
+			20 = IMAGE
+			20.file = EXT:smarty_demo/res/img/image_3.jpg
+			20.file.width = 140c
+			20.file.height = 80c
+			20.offset = 14,14
+		}
+	}
+
+	// Link definition for the {link} plugin
+	demo_link {
+		parameter = http://www.google.com/search?q=smarty _blank external-link
+		AtagParams = class="external-link"
+	}
+
+	// Menu definition for the {object} plugin
+	demo_object = HMENU
+	demo_object {
+		wrap = <div class="smarty_demo_menu"> | </div>
+		entryLevel = 0
+		1 = TMENU
+		1 {
+			expAll = 0
+			noBlur = 1
+			wrap = <ul>|</ul>
+			NO {
+				ATagTitle.field = abstract // description // subtitle
+				allWrap = <li> | </li>
+				stdWrap.htmlSpecialChars = 1
+			}
+			CUR < .NO
+			CUR = 1
+			CUR {
+				allWrap = <li class="current">|</li>
+				ATagParams = class="current"
+			}
+		}
+	}
+}

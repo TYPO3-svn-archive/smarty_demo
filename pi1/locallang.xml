@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_smartydemo_pi1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="city">City</label>
+			<label index="name">Name</label>
+			<label index="country">Country</label>
+			<label index="email">Email</label>
+			<label index="link_1">This is an internal link</label>
+			<label index="link_2">This is an external link</label>
+			<label index="link_3">This is an email link</label>
+			<label index="translate_1">The quick brown fox</label>
+			<label index="translate_2">The tiger in the jungle</label>
+			<label index="translate_3">Read the {link parameter="typo3conf/ext/smarty_demo/doc/manual.pdf _blank download-link"}manual{/link}!</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="city">Stadt</label>
+			<label index="name">Name</label>
+			<label index="country">Land</label>
+			<label index="email">E-Mail</label>
+			<label index="link_1">Das ist ein interner Link</label>
+			<label index="link_2">Das ist ein externer Link</label>
+			<label index="link_3">Das ist ein E-Mail Link</label>
+			<label index="translate_1">Der schnelle braune Fuchs</label>
+			<label index="translate_2">Der Tiger im Dschungel</label>
+			<label index="translate_3">Lesen Sie die {link parameter="typo3conf/ext/smarty_demo/doc/manual.pdf _blank download-link"}Anleitung{/link}!</label>
+		</languageKey>
+	</data>
+</T3locallang>
