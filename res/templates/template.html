@@ -27,7 +27,7 @@
 	{$demo_text|format}
 	<h2>Various Smarty Plugins for TYPO3</h2>
 	<h3>The {ldelim}image{rdelim} Plugin</h3>
-	<h4>Example using TypoScript params</h4>
+	<h4>Example using TypoScript paramaters in the Smarty tag</h4>
 	<code>
     	{literal}{image file="EXT:smarty_demo/res/img/image_2.jpg" file.width="200" titleText="A Demo of the image plugin" params='class="demo-image bg-f5fafa"'}{/literal}
     </code>
@@ -44,7 +44,7 @@
 		{image setup="plugin.tx_smartydemo_pi1.demo_image" file.20.file="EXT:smarty_demo/res/img/image_3.jpg" params='class="demo-image bg-ffffff"'}
 	</p>
 	<h3>The {ldelim}link{rdelim} Plugin</h3>
-	<h4>Example using TypoScript params</h4>
+	<h4>Example using TypoScript paramaters in the Smarty tag</h4>
 	<code>
     	{literal}
     		{link parameter="_self _blank internal-link" additionalParams="&demo=1"}
@@ -71,6 +71,14 @@
     	{/literal}
     </code>
 	<p>{link parameter="hello@world.com - email-link"}{translate}link_3{/translate}{/link}</p>
+	<h3>The {ldelim}url{rdelim} Plugin</h3>
+	<h4>Example using TypoScript paramaters in the Smarty tag</h4>
+	<code>
+    	{literal}
+			{url parameter="_self" additionalParams="&demo=1"}
+    	{/literal}
+    </code>
+    <p>{url parameter="_self" additionalParams="&demo=1"}</p>
 	<h3>The {ldelim}data{rdelim} Plugin</h3>
 	<h4>Getting the current page title</h4>
 	<code>

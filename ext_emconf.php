@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Smarty Demo',
-	'description' => 'Demo extension for Smarty extension templating engine',
+	'description' => 'Demo of Smarty Templating Engine extension',
 	'category' => 'misc',
 	'author' => 'Simon Tuck',
 	'author_email' => 'stu@rtpartner.ch',
